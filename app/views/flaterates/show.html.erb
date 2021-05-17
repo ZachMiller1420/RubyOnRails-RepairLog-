@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+
+<div class="bg-light p-5 rounded-lg m-3">
+  <h5 class="display-4"> Vehicle Entry </h5>
+  <p class="lead">
+  <ul>
+    <li><strong>Ro # :</strong>
+  <%= @flaterate.ro_num %></li>
+    <li><strong>Date:</strong>
+  <%= @flaterate.date %></li>
+    <li> <strong>Year make model:</strong>
+  <%= @flaterate.year_make_model %></li>
+    <li><strong>Work:</strong>
+  <%= @flaterate.work %></li>
+    <li><strong>Hrs:</strong>
+  <%= @flaterate.hrs %></li>
+
+  </ul>
+  </p>
+  <hr class="my-4">
+ <%= link_to 'Edit', edit_flaterate_path(@flaterate), class: "btn btn-secondary" %> 
+<%= link_to 'Back', flaterates_path, class: "btn btn-secondary" %>
+</div>
+

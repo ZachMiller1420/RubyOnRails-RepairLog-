@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  ro_num: MyString
+  year_make_model: MyString
+  work: MyString
+  hrs: 1
+
+two:
+  date: MyString
+  ro_num: MyString
+  year_make_model: MyString
+  work: MyString
+  hrs: 1

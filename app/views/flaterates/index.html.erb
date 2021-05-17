@@ -1,0 +1,126 @@
+<p id="notice"><%= notice %></p>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<style>
+
+div {
+text-align: right;
+width: 25%;
+}
+
+h1 {
+font-family: 'Abril Fatface', cursive;
+width: 25%;
+text-align: center;
+}
+
+img {
+   display: block;
+  margin-left: auto
+  margin-right: auto;
+  width: 100%;
+  }
+
+body {
+   background-image: url("https://www.itl.cat/pngfile/big/303-3036482_wallpaper-of-car-ford-ford-f-150-raptor.jpg");
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+p {
+  font-size: 12px:
+  font-family: 'Abril Fatface', cursive;
+  text-align: left;
+  
+
+  
+
+}
+
+footer {
+  
+  position:absolute;
+  left:1500px;
+  top:90px;
+  width: 15%;
+  
+}
+
+ 
+</style>
+
+<body>
+
+<%if user_signed_in?%>
+
+  <table class= "table table table-success table-striped table table-dark table-hover ">
+    <thead class= "thead-dark">
+      <tr>
+        <th>Date (year/month/day)</th>
+        <th>Ro #</th>
+        <th>Year/Make/Model</th>
+        <th>Work Done</th>
+        <th>Hrs</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @flaterates.each do |flaterate| %>
+        <tr>
+          <td><%= flaterate.date %></td>
+          <td><%= flaterate.ro_num %></td>
+          <td><%= flaterate.year_make_model %></td>
+          <td><%= flaterate.work %></td>
+          <td><%= flaterate.hrs %></td>
+          <td><%= link_to 'Show', flaterate %></td>
+          <td><%= link_to 'Edit', edit_flaterate_path(flaterate) %></td>
+          <td><%= link_to 'Destroy', flaterate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      
+      <% end %>
+    
+    </tbody>
+  </table>
+
+  <img src="https://cdn.dlron.us/static/dealer-16599/Ford_Line_Up_banner.jpg" class= "img-fluid"  alt ="Ford Line Up">
+
+
+  <div id=total input class="form-control" type="text" aria-label="readonly input example" readonly> 
+  <h2><%= link_to 'New Vehicle', new_flaterate_path, class:"btn btn-info"%> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Total hours: <%= @flaterates.sum(:hrs)%>
+  </h2>
+
+
+
+</div>
+
+
+
+<%else%>
+<footer class="bg-light p-5 rounded-lg m-3">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<h1 > FRtracker</h1>
+<p> This application is the perfect tool for any automotive shop that bases their pay on a FLAT RATE system. This tool can be used as a TRACKER for all vehicles that have been worked on. It helps a mechanic keep track of how many hours each job should pay.
+</p>
+
+<br>
+
+<%= link_to 'Login', new_user_session_path, class: "btn btn-dark" %>
+&emsp;&emsp;
+<%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-dark" %>
+
+<%end%>
+</footer>
+</body>
+
+
+
+
+
+
+  
