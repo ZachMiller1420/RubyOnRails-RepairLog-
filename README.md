@@ -1,25 +1,20 @@
-# README
+# Repair Log CRUD App using Ruby on Rails
+This app is inteneded for a mechanic repair shop to keep track of the repairs completed and how long each repair took. The application displays the repairs in a table and and allows the user the basic CRUD functions. They can (C)reate a work order, (R)ead or viewing the work order, and (U)pdate/(D)elete the work order. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Acknowledgements
 
-* Ruby version
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 
-* System dependencies
+ 
+ - [Codemy Ruby on Rails -Freinds List App](https://www.youtube.com/watch?v=iF8caVyDi5g&list=PLCC34OHNcOtrk3BDsfZwf4GattdLoKCOF)
 
-* Configuration
 
-* Database creation
+## Tech Stack
 
-* Database initialization
+**Client:** HTML, CSS
 
-* How to run the test suite
+**Server:** Node, Ruby on Rails 
+![Rails Crud App 1](https://user-images.githubusercontent.com/72115939/185291069-55dc3d9d-8636-4754-ace2-0552c77a1907.gif)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-# flaterates
