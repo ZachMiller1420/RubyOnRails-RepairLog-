@@ -16,7 +16,7 @@ This app is inteneded for a mechanic repair shop to keep track of the repairs co
 
 **Server:** Node, Ruby on Rails 
 
-##Demo
+## Demo
 ![Rails Crud App 1](https://user-images.githubusercontent.com/72115939/185291069-55dc3d9d-8636-4754-ace2-0552c77a1907.gif)
 
 
